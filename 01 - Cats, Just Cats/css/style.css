@@ -1,0 +1,149 @@
+:root {
+    --background: #FF914B;
+    --wrapper-background: #FFF;
+    --font: #000;
+    --link: #E67332;
+    --button: #E67332;
+    --white: #FFF;
+}
+
+body {
+    background: var(--background);
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+}
+
+.wrapper {
+    max-width: 68.75rem;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    
+    margin: 0 auto;
+    padding: 50px;
+
+    background: var(--wrapper-background);
+    color: var(--font);
+
+}
+
+/* ---- HEADER ---- */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header img {
+    height: 3.125rem;
+    margin-right: 0.938rem;
+}
+
+.header h1 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* ---- CONTENT ---- */
+
+.content {
+    margin-top: 3.125rem;
+
+    display: flex;
+}
+
+/* -- Image -- */
+
+.content .image {
+    margin-left: 1.563rem;
+    max-width: 50%;
+}
+
+.content .image img {
+    width: 100%;
+}
+
+/* -- Info -- */
+
+.content .info {
+    width: 100%;
+}
+
+.content .info ul {
+    list-style: none;
+    text-align: justify;
+}
+
+.content .info ul li {
+    margin-bottom: 0.938rem;
+}
+
+/* ---- FOOTER ---- */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 2.188rem;
+}
+
+/* -- Button -- */
+
+.footer .generateBtn {
+    background-color: var(--button);
+    color: var(--white);
+    border: none;
+    font-size: 1rem;
+    padding: 0.625rem 0.938rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+.footer .generateBtn:hover {
+    filter: brightness(95%);
+}
+
+/* -- P -- */
+
+.footer p {
+    margin-top: 0.938rem;
+    font-size: 0.875rem;
+}
+
+.footer p a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+/* ---- RESPONSIVE ---- */
+
+@media (max-width: 50rem) {
+    :root {
+        font-size: 112.5%;
+    }
+
+    .wrapper {
+        padding: 30px;
+    }
+
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .content .image {
+        max-width: 100%;
+        margin: 0;
+        margin-bottom: 1.563rem;
+    }
+}
